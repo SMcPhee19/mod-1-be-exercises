@@ -1,3 +1,4 @@
+require 'rspec'
 require './lib/card'
 require './lib/turn'
 
@@ -11,7 +12,7 @@ RSpec.describe Turn do
 
   describe 'initialize' do
     it 'exists' do
-      require 'pry'; binding.pry
+      # require 'pry'; binding.pry
       expect(turn1).to be_instance_of(Turn)
       expect(turn2).to be_instance_of(Turn)
     end
@@ -42,7 +43,7 @@ RSpec.describe Turn do
   describe 'feedback' do
     it 'gives feedback based on correct?' do
       expect(turn1.feedback).to eq("Correct!")
-      expect(turn2.feedback).to eq("Inccorect")
+      expect(turn2.feedback).to eq("Incorrect")
     end
   end 
 end
