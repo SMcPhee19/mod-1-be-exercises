@@ -8,17 +8,19 @@ RSpec.describe 'map' do
     expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
   end
 
-  xit 'doubles' do
+  it 'doubles' do
     numbers = [1, 2, 3, 4, 5]
     doubles = numbers.map do |number|
-      # Your code goes here
+      number * 2
     end
     expect(doubles).to eq([2, 4, 6, 8, 10])
   end
 
-  xit 'squares' do
+  it 'squares' do
     numbers = [1, 2, 3, 4, 5]
-    # Your code goes here
+    squares = numbers.map do |number|
+      number ** 2
+    end
     expect(squares).to eq([1, 4, 9, 16, 25])
   end
 
