@@ -52,7 +52,7 @@ RSpec.describe Pirate do
     expect(pirate.cursed?).to eq(false)
 
     pirate.commit_heinous_act
-
+    # require 'pry'; binding.pry
     expect(pirate.cursed?).to eq(true)
   end
 

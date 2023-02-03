@@ -10,11 +10,11 @@ class Pirate
   end
 
   def cursed?
-    @cursed >= 3
+    @cursed > 2
   end
 
   def commit_heinous_act
-    @cursed + 1
+    @cursed += 1
   end
 
   def say(x)
