@@ -29,33 +29,48 @@ RSpec.describe 'map pattern' do
     expect(squares).to eq([1, 4, 9, 16, 25])
   end
 
-  xit 'lengths' do
+  it 'lengths' do
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    lengths = []
+    names.each do |name|
+      lengths << name.length
+    end
     expect(lengths).to eq([5, 3, 7, 5, 3])
   end
 
-  xit 'normalize zip codes' do
+  it 'normalize zip codes' do
     numbers = [234, 10, 9119, 38881]
-    # Your code goes here
+    zip_code = []
+    numbers.each do |number|
+     zip_code << number.to_s.rjust(5, "0")
+    end
     expect(zip_code).to eq(["00234", "00010", "09119", "38881"])
   end
 
-  xit 'backwards' do
+  it 'backwards' do
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    backwards = []
+    names.each do |name|
+      backwards << name.reverse
+    end
     expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
   end
 
-  xit 'words with no vowels' do
+  it 'words with no vowels' do
     words = ["green", "sheep", "travel", "least", "boat"]
-    # Your code goes here
+    without_vowels = []
+    words.each do |word|
+      without_vowels << word.delete('aeiou')
+    end
     expect(without_vowels).to  eq(["grn", "shp", "trvl", "lst", "bt"])
   end
 
-  xit 'trims last letter' do
+  it 'trims last letter' do
     animals = ["dog", "cat", "mouse", "frog", "platypus"]
-    # Your code goes here
+    trimmed = []
+    animals.each do |animal|
+      trimmed << animal.chop
+    end
     expect(trimmed).to eq(["do", "ca", "mous", "fro", "platypu"])
   end
 end
