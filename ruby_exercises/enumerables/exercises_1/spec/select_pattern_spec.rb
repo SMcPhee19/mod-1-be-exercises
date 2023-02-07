@@ -54,21 +54,30 @@ RSpec.describe 'select pattern' do
     expect(selected).to eq(["bring", "singing"])
   end
 
-  xit 'words containing e' do
+  it 'words containing e' do
     words = ["four", "red", "five", "blue", "pizza", "purple"]
-    # Your code goes here
+    selected = []
+    words.each do |word|
+      selected << word if word.include?('e')
+    end
     expect(selected).to eq(["red", "five", "blue", "purple"])
   end
 
-  xit 'dinosaurs' do
+  it 'dinosaurs' do
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
-    # Your code goes here
+    dinosaurs = []
+    animals.each do |animal|
+      dinosaurs << animal if animal.length > 7
+    end
     expect(dinosaurs).to eq(["tyrannosaurus", "achillesaurus", "qingxiusaurus"])
   end
 
-  xit 'floats' do
+  it 'floats' do
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
-    # Your code goes here
+    floats = []
+    numbers.each do |number|
+      floats << number if number
+    end
     expect(floats).to eq([1.4, 3.5, 4.9, 9.1, 8.0])
   end
 
