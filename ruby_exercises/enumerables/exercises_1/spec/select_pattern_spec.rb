@@ -47,7 +47,10 @@ RSpec.describe 'select pattern' do
 
   it 'words ending in ing' do
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
-    # Your code goes here
+    selected = []
+    words.each do |word|
+      selected << word if word.end_with?('ing')
+    end
     expect(selected).to eq(["bring", "singing"])
   end
 
