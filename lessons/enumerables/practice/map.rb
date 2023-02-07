@@ -2,53 +2,69 @@
 # prints out the return value of that method.  
 
 
-def capitalize
-    names = ["alice", "bob", "charlie"]
+# def capitalize
+#     names = ["alice", "bob", "charlie"]
+#     names.map do |name|
+#         name.capitalize
+#     end
+#     # expected return value is ["Alice", "Bob", "Charlie"]
+# end
+# p capitalize
 
-    # Your code goes here
+# def doubles
+#     numbers = [1, 2, 3, 4, 5]
 
-    # expected return value is ["Alice", "Bob", "Charlie"]
-end
+#     numbers.map do |number|
+#         number * 2
+#     end
+#     # expected return value is [2, 4, 6, 8, 10]
+# end
+# p doubles
 
-def doubles
-    numbers = [1, 2, 3, 4, 5]
+# def squares
+#     numbers = [1, 2, 3, 4, 5]
 
-    # Your code goes here
+#     numbers.map do |number|
+#         number ** 2
+#     end
+#     # expected return value is [1, 4, 9, 16, 25]
+# end
+# p squares
 
-    # expected return value is [2, 4, 6, 8, 10]
-end
+# def lengths
+#     names = ["alice", "bob", "charlie", "david", "eve"]
 
-def squares
-    numbers = [1, 2, 3, 4, 5]
-
-    # Your code goes here
-
-    # expected return value is [1, 4, 9, 16, 25]
-end
-
-def lengths
-    names = ["alice", "bob", "charlie", "david", "eve"]
-
-    # Your code goes here
-
-    # expected return value is [5, 3, 7, 5, 3]
-end
+#     names.map do |name|
+#         name.length
+#     end
+#     # expected return value is [5, 3, 7, 5, 3]
+# end
+# p lengths
 
 def normalize_zip_codes
     numbers = [234, 10, 9119, 38881]
 
-    # Your code goes here
-
+    numbers.map do |number|
+        # number.to_s.rjust(5, "0")
+        number.to_s
+        while number.length > 5
+            number = number.insert(0, "0")
+        end
+        number
+    end 
     # expected return value is ["00234", "00010", "09119", "38881"]
 end
+p normalize_zip_codes
 
-def backwards
+xdef backwards
     names = ["alice", "bob", "charlie", "david", "eve"]
 
-    # Your code goes here
-
+    names.map do |name|
+        name.backwards
+    end
     # expected return value is ["ecila", "bob", "eilrahc", "divad", "eve"]
 end
+p backwards
 
 def words_with_no_vowels
     words = ["green", "sheep", "travel", "least", "boat"]
