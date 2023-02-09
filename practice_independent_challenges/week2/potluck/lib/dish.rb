@@ -1,4 +1,5 @@
 class Dish
+  attr_accessor :name, :category
   def initialize(name, category)
     @name = name
     @category = category
@@ -11,5 +12,6 @@ class Dish
   def category
     @category
   end
+  
 
 end

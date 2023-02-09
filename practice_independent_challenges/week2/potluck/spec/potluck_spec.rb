@@ -4,6 +4,7 @@ require './lib/potluck'
 
 RSpec.describe 'potluck' do
   let(:potluck) {Potluck.new("7-13-18")}
+  # let(:dish_name) {Dish.new}
 
   it 'had date' do
     potluck.date
@@ -11,10 +12,16 @@ RSpec.describe 'potluck' do
     expect(potluck.date).to eq("7-13-18")
   end
 
-  is 'has dishes' do
+  it 'has dishes' do
     potluck.dishes
-
+    
     expect(potluck.dishes).to eq([])
+  end
+
+  it 'can add dishes' do
+    potluck.add_dish(dish_name)
+    require 'pry'; binding.pry
+    expect(potluck.add_dish).to eq(couscous_salad)
   end
 
 end
