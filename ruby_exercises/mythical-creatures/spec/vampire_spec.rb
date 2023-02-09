@@ -33,5 +33,6 @@ RSpec.describe Vampire do
 
     vampire.drink
     expect(vampire.thirsty).to be false
+    require 'pry'; binding.pry
   end
 end
