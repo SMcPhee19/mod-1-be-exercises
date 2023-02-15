@@ -22,5 +22,12 @@ RSpec.describe Pet do
     @samson.feed
     expect(@samson.fed?).to be(true)
   end
+  
+  it "has an age" do
+    @samson.age
+
+    expect(@samson.age).to eq(3)
+  end
+  require 'pry'; binding.pry
 
 end
