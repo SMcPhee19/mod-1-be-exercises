@@ -7,7 +7,7 @@ class Pet
     @name = attributes[:name]
     @type = attributes[:type]
     @fed = false
-    @age = 3
+    @age = attributes[:age]
   end
 
   def feed
@@ -18,7 +18,4 @@ class Pet
     @fed
   end
 
-  def age
-    @age
-  end
 end
