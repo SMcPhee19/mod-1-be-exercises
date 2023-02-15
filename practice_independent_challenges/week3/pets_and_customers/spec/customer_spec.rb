@@ -38,5 +38,6 @@ RSpec.describe Customer do
 
     expect(@joel.outstanding_balance).to eq(22)
   end
+  # require 'pry'; binding.pry
 
 end
