@@ -2,7 +2,7 @@ require './lib/pet'
 
 RSpec.describe Pet do
   before(:each) do
-    @samson = Pet.new({name: "Samson", type: :dog})
+    @samson = Pet.new({name: "Samson", type: :dog, age: 3})
   end
 
   it "exists" do
@@ -24,10 +24,7 @@ RSpec.describe Pet do
   end
   
   it "has an age" do
-    @samson.age
-
     expect(@samson.age).to eq(3)
   end
-  require 'pry'; binding.pry
 
 end
