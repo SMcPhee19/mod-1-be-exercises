@@ -1,11 +1,13 @@
 class Pet
   attr_reader :name,
-              :type
+              :type,
+              :age
 
   def initialize(attributes)
     @name = attributes[:name]
     @type = attributes[:type]
     @fed = false
+    @age = 3
   end
 
   def feed
@@ -14,5 +16,9 @@ class Pet
 
   def fed?
     @fed
+  end
+
+  def age
+    @age
   end
 end
