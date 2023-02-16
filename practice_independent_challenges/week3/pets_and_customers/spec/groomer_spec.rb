@@ -11,16 +11,16 @@ RSpec.describe Groomer do
     it "exists" do
       expect(@groomer).to be_instance_of(Groomer)
     end
-
+    
     it "has a name" do
       expect(@groomer.name).to eq("The Hair Ball")
     end
-
+    
     it "starts with no customers" do
       expect(@groomer.customers).to eq([])
     end
   end
-
+  
   describe "Integrating with Customers" do
     before(:each) do
       @joel = Customer.new("Joel", 2)
@@ -34,8 +34,9 @@ RSpec.describe Groomer do
       @groomer.add_customer(@billy)
       expect(@groomer.customers).to eq([@joel, @billy])
     end
-
+    
     it "can count the number of pets of a certain type" do
+      # require 'pry'; binding.pry
       @joel.adopt(@samson)
       @joel.adopt(@lucy)
       @billy.adopt(@molly)

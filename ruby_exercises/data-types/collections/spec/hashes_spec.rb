@@ -18,7 +18,7 @@ RSpec.describe 'Hashes' do
     ages = ______
     expect(ages.length).to eq(2)
     expect(ages["ben"]).to eq(4)
-    expect(ages["kelly"]).to eq(6)
+    expect(ages["kelly"]).to eq(6)ß
   end
 
   xit 'test 4' do

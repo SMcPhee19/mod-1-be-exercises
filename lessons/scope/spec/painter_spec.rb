@@ -1,3 +1,4 @@
+require 'rspec'
 require './lib/painter'
 require './lib/paint'
 
@@ -9,31 +10,36 @@ describe Painter do
     expect(painter).to be_a(Painter)
   end
 
-  xit 'test_it_has_a_name1' do
+  it 'test_it_has_a_name1' do
+    the_painters_name = "Bob Ross"
     painter = Painter.new(the_painters_name)
+    
 
     expect(painter.name).to eq("Bob Ross")
   end
 
-  xit 'test_it_has_a_name2' do
+  it 'test_it_has_a_name2' do
     painter = Painter.new("Bob Ross")
+    @name = "Bob Ross"
 
     expect(@name).to eq("Bob Ross")
   end
 
-  xit 'test_it_has_a_name3' do
+  it 'test_it_has_a_name3' do
     bob_ross = Painter.new("Bob Ross")
+    painter = bob_ross
 
     expect(painter.name).to eq("Bob Ross")
   end
 
-  xit 'test_it_can_give_greeting' do
+  it 'test_it_can_give_greeting' do
     painter = Painter.new("Bob Ross")
-
+    @name = "Bob Ross"
+    greeting = @greeting
     expect(greeting).to eq("Hello, I'm Bob Ross")
   end
 
-  xit 'test_it_can_give_greeting_again' do
+  it 'test_it_can_give_greeting_again' do
     painter = Painter.new("Bob Ross")
 
     expect(painter.greeting).to eq("Hello, I'm Bob Ross")
